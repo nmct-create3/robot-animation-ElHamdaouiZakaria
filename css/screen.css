@@ -10,7 +10,7 @@
   /* Global colors */
   --global-color-back: #6dbedf;
   --global-color-front: white;
-  --global-color-cyan: cyan;
+  --global-color-custom: lightskyblue;
   
   /* global page settings */
   --global-html-color: var(--global-color-front);
@@ -36,7 +36,7 @@
 */
 
 html {
-  background-color: var(--global-color-cyan);
+  background-color: var(--global-color-custom);
   font-size: 16px;
   line-height: 1.5;
   font-family: sans-serif;
@@ -146,43 +146,17 @@ body {
 */
 
 .c-robotsvg {
-  max-width: 200px;
+  max-width: 350px;
   overflow: visible;
 
-  /* &:hover {
-    .c-robot {
-      animation-play-state: paused;
-    }
-  } */
 }
 
 .c-robot {
   fill: var(--global-color-front);
-  animation-name: robotHover;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.c-robot__pause:checked + .c-robotsvg {
-  .c-robot {
-    animation-play-state: var(--global-animation-play-state-paused);
-  }
 }
 
 .c-robot__shadow {
   opacity: .1;
-  animation-name: shadowPulse;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transform-origin: 50% 100%;
-}
-
-body:has(input:checked) .c-robot__shadow {
-  animation-play-state: var(--global-animation-play-state-paused);
 }
 
 .c-robot__torso {
@@ -205,7 +179,7 @@ body:has(input:checked) .c-robot__shadow {
     Component: Controls
 */
 
-@keyframes robotHover {
+/* @keyframes robotHover {
   0% {
     transform: translateY(0);
   }
@@ -219,7 +193,7 @@ body:has(input:checked) .c-robot__shadow {
   100% {
     transform: scale(0.75);
   }
-}
+} */
 
 /*------------------------------------*\
 #UTILITIES
